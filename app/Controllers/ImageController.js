@@ -3,7 +3,6 @@
 import imageService from "../Services/ImageService.js";
 import { ProxyState } from "../AppState.js";
 
-//      (you may wish to set it as a background image: https://www.w3schools.com/JSREF/prop_style_backgroundimage.asp)
 //Private
 
 function _drawBgImage() {

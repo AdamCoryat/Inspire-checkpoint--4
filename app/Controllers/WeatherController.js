@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import weatherService from "../Services/WeatherService.js";
 
+//NOTE add more css to the clock
 function currentTime() {
   var date = new Date();
   var hour = date.getHours();
@@ -22,7 +23,7 @@ function updateTime(k) {
     return k;
   }
 }
-
+//NOTE add a icon to click between C and F
 function _drawWeather() {
   let template = ProxyState.weather.Template;
   document.getElementById("weather").innerHTML = template;
