@@ -1,23 +1,18 @@
-import {
-  ProxyState
-} from "../AppState.js";
+import { ProxyState } from "../AppState.js";
 import weatherService from "../Services/WeatherService.js";
 
-//NOTE The weather service and controller are mostly done,
-//		you may wish to check out the model and include some additional data.
-
 function currentTime() {
-  var date = new Date(); /* creating object of Date class */
+  var date = new Date();
   var hour = date.getHours();
   var min = date.getMinutes();
   var sec = date.getSeconds();
   hour = updateTime(hour);
   min = updateTime(min);
   sec = updateTime(sec);
-  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
   var t = setTimeout(function () {
-    currentTime()
-  }, 1000); /* setting timer */
+    currentTime();
+  }, 1000);
 }
 
 function updateTime(k) {
@@ -29,36 +24,33 @@ function updateTime(k) {
 }
 
 function _drawWeather() {
-  let template = ProxyState.weather.Template
-  document.getElementById('weather').innerHTML = template
+  let template = ProxyState.weather.Template;
+  document.getElementById("weather").innerHTML = template;
 }
-
 
 export default class WeatherController {
   constructor() {
     ProxyState.on("weather", _drawWeather);
-    currentTime()
-    this.getWeather()
+    currentTime();
+    this.getWeather();
   }
 
   switchTemp() {
-    let temp = ProxyState.weather.temp
+    let temp = ProxyState.weather.temp;
     if (temp == true) {
-      document.getElementById('temp').innerHTML = ProxyState.weather.c
-      ProxyState.weather.temp = false
+      document.getElementById("temp").innerHTML = ProxyState.weather.c;
+      ProxyState.weather.temp = false;
     } else {
-      document.getElementById('temp').innerHTML = ProxyState.weather.f
-      ProxyState.weather.temp = true
+      document.getElementById("temp").innerHTML = ProxyState.weather.f;
+      ProxyState.weather.temp = true;
     }
   }
-
 
   getWeather() {
     try {
-      weatherService.getWeather()
+      weatherService.getWeather();
     } catch (e) {
-      console.error(e)
+      console.error(e);
     }
   }
-
 }
