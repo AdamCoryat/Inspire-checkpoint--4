@@ -51,8 +51,8 @@
 }
 
 .weather-card {
-  width: 6vw;
-  height: 9vh;
+  min-width: 6vw;
+  min-height: 9vh;
 }
 
 .weather-col {
