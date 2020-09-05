@@ -10,47 +10,40 @@
 </head>
 
 <body class="container-fluid" id="bg-img">
-    <main">
-
-        <div class="row">
-            <div class="col-11 weather-col">
-            </div>
-            <div id="weather" class="col-1 text-center text-light weather-col">
-            </div>
-            <div class="col-5 clock-col">
-            </div>
-            <div class="col-2 justify-content-center align-content-center d-flex flex-wrap">
-                <div id="clock" class="card time-card tran-bg border border-dark">
-                </div>
-            </div>
-            <div class="col-5">
+    <main class="row">
+        <div class="col-11 weather-col">
+        </div>
+        <div id="weather" class="col-1 text-center text-light weather-col">
+        </div>
+        <div class="col-5 clock-col">
+        </div>
+        <div class="col-2 justify-content-center align-content-center d-flex flex-wrap">
+            <div id="clock" class="card time-card tran-bg border border-dark">
             </div>
         </div>
-        <div class="row">
-            <div id="toggle-bg" class="col-3 quote-col">
-            </div>
-            <div id="quote" class="col-6 quote-col">
-            </div>
-            <div id="todo" class="col-3 quote-col">
+        <div class="col-5">
+        </div>
+        </div>
+        <div id="toggle-bg" class="col-3 quote-col d-flex flex-wrap align-content-end justify-content-start">
+            <button onclick="app.imageController.getBgImage()">new bg</button>
+        </div>
+        <div id="quote" class="col-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
+        </div>
+        <div id="todo" class="col-3 quote-col">
+        </div>
+    </main>
+
+    <footer class="container-fluid bg-transparent text-light">
+        <div class="row text-center">
+            <div class="col d-flex flex-wrap justify-content-center align-content-end">
+                <p><small>Made with love by A.D.D Designs LLC</small></p>
             </div>
         </div>
-
-
-
-
-        </main>
-
-        <footer class="container-fluid bg-transparent text-light">
-            <div class="row text-center">
-                <div class="col">
-                    <p><small>Made with love by A.D.D Designs LLC</small></p>
-                </div>
-            </div>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
-            integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
-            crossorigin="anonymous"></script>
-        <script src="app/main.js" type="module"></script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
 </body>
 
 </html>
