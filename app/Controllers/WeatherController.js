@@ -10,10 +10,11 @@ function currentTime() {
   hour = updateTime(hour);
   min = updateTime(min);
   sec = updateTime(sec);
-  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+  document.getElementById("clock").innerHTML = `${hour}: ${min}: ${sec}`;
   var t = setTimeout(function () {
     currentTime();
   }, 1000);
+  ProxyState.time = hour;
 }
 
 function updateTime(k) {
@@ -23,6 +24,19 @@ function updateTime(k) {
     return k;
   }
 }
+
+function _drawGreeting() {
+  let elem = document.getElementById("greeting");
+  let hour = ProxyState.time;
+  if (hour <= 5 && hour >= 11) {
+    elem.innerHTML = `<h1>Good Morning</h1>`;
+  } else if (hour >= 12 && hour <= 17) {
+    elem.innerHTML = `<h1>Good Afternoon</h1>`;
+  } else {
+    elem.innerHTML = `<h1>Good Evening</h1>`;
+  }
+}
+
 //NOTE add a icon to click between C and F
 function _drawWeather() {
   let template = ProxyState.weather.Template;
@@ -32,6 +46,7 @@ function _drawWeather() {
 export default class WeatherController {
   constructor() {
     ProxyState.on("weather", _drawWeather);
+    ProxyState.on("time", _drawGreeting);
     currentTime();
     this.getWeather();
   }

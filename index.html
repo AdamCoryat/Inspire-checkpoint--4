@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
@@ -16,21 +18,20 @@
         </div>
         <div id="weather" class="col-1 text-center text-light weather-col">
         </div>
-        <div class="col-5 clock-col">
-        </div>
-        <div class="col-2 justify-content-center align-content-center d-flex flex-wrap">
-            <div id="clock" class="card time-card tran-bg border border-dark">
+        <div class="col-12 justify-content-center align-content-end d-flex flex-wrap">
+            <div id="clock" class="">
+            </div>
+            <div id="greeting"
+                class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow">
             </div>
         </div>
-        <div class="col-5">
         </div>
-        </div>
-        <div id="toggle-bg" class="col-3 quote-col d-flex flex-wrap align-content-end justify-content-start">
-            <button onclick="app.imageController.getBgImage()">new bg</button>
+        <div class="col-3 quote-col">
+
         </div>
         <div id="quote" class="col-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
         </div>
-        <div id="todo" class="col-3 quote-col">
+        <div id="todo" class="col-3 quote-col d-flex flex-wrap align-content-end justify-content-end invisible">
             <div class="card tran-bg border border-dark text-light">
                 <div class="card-body tran-bg">
                     <h4 class="card-title text-center">ToDo</h4>
@@ -44,8 +45,12 @@
                     </div>
                 </form>
             </div>
-
-
+        </div>
+        <div class="col-6 d-flex flex-wrap align-content-end justify-content-start">
+            <button onclick="app.imageController.getBgImage()">new bg</button>
+        </div>
+        <div id="list-toggle" class="col-6 d-flex flex-wrap align-content-end justify-content-end text-light">
+            <h3 class="text-shadow" onclick="app.todoController.toggleList()">Todo</h3>
         </div>
     </main>
 

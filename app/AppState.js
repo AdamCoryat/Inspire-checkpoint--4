@@ -13,6 +13,7 @@ class AppState extends EventEmitter {
   image = null;
   /** @type {Quote} */
   quote = null;
+  time = Number;
 }
 
 export const ProxyState = new Proxy(new AppState(), {

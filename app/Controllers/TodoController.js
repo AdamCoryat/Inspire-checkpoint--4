@@ -1,8 +1,7 @@
 import todoService from "../Services/TodoService.js";
 import { ProxyState } from "../AppState.js";
 
-//TODO Create the draw function
-function _drawTodos() {
+function _drawTasks() {
   let template = "";
   ProxyState.todos.forEach((t) => (template += t.taskTemplate));
   document.getElementById("task").innerHTML = template;
@@ -10,11 +9,11 @@ function _drawTodos() {
 
 export default class TodoController {
   constructor() {
-    ProxyState.on("todos", _drawTodos);
-    todoService.getTodos();
+    ProxyState.on("todos", _drawTasks);
+    todoService.getTasks();
   }
 
-  getTodos() {
+  getTasks() {
     try {
       todoService.getTodos();
     } catch (error) {
@@ -36,27 +35,30 @@ export default class TodoController {
     }
   }
 
-  /**
-   * This method takes in an id of the Todo that should be togggled as complete
-   * @param {string} todoId
-   */
-  toggleTodoStatus(todoId) {
+  toggleTaskStatus(id) {
     try {
-      todoService.toggleTodoStatus(todoId);
+      todoService.toggleTaskStatus(id);
     } catch (error) {
       console.error(error);
     }
   }
 
-  /**
-   * This method takes in an id of the Todo that should be removed
-   * @param {string} todoId
-   */
   removeTask(id) {
     try {
       todoService.removeTask(id);
     } catch (error) {
       console.error(error);
+    }
+  }
+
+  toggleList() {
+    let elem = document.getElementById("todo");
+    let res = elem.classList.contains("invisible");
+
+    if (res == true) {
+      elem.classList.remove("invisible");
+    } else if (res == false) {
+      elem.classList.add("invisible");
     }
   }
 }
