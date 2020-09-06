@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
 </head>
@@ -30,6 +31,21 @@
         <div id="quote" class="col-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
         </div>
         <div id="todo" class="col-3 quote-col">
+            <div class="card tran-bg border border-dark text-light">
+                <div class="card-body tran-bg">
+                    <h4 class="card-title text-center">ToDo</h4>
+                </div>
+                <ul id="task" class="list-group list-group-flush">
+                </ul>
+                <form onsubmit="app.todoController.addTask(event)" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="task" id="task" class="form-control" placeholder="write task here...">
+                        <button type="submit">add task</button>
+                    </div>
+                </form>
+            </div>
+
+
         </div>
     </main>
 

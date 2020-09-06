@@ -8,12 +8,13 @@ let url = "adamcoryat/todos/";
 class TodoService {
   async getTodos() {
     let res = await api.get(url);
-    ProxyState.todos = res.data.map((t) => new Todo(t));
+    console.log(res);
+    ProxyState.todos = res.data.data.map((t) => new Todo(t));
   }
 
-  async addTodo(todo) {
-    let res = await api.post(url, todo);
-    ProxyState.todos = [...ProxyState.todos, new Todo(res.data)];
+  async addTask(task) {
+    let res = await api.post(url, task);
+    ProxyState.todos = [...ProxyState.todos, new Todo(res.data.data)];
   }
 
   async toggleTodoStatus(todoId) {
@@ -26,8 +27,10 @@ class TodoService {
     //TODO how do you trigger this change
   }
 
-  async removeTodo(id) {
-    let res = await api.delete(id);
+  async removeTask(id) {
+    debugger;
+    console.log(id);
+    let res = await api.delete(`adamcoryat/todos/${id}`);
     let index = ProxyState.todos.findIndex((t) => t.id == id);
     if (index == -1) {
       throw new Error("Invalid Id");
