@@ -49,6 +49,9 @@ function _drawGreeting() {
   let elem = document.getElementById("greeting");
   let hour = ProxyState.time;
   let user = ProxyState.user;
+  if (user == null) {
+    user = "";
+  }
   if (hour >= 5 && hour <= 11) {
     elem.innerHTML = `<h1 class="greeting-f-s">Good Morning, ${user}</h1>`;
   } else if (hour >= 12 && hour <= 17) {

@@ -25,6 +25,10 @@ class AppState extends EventEmitter {
 
   loadLocal() {
     let data = JSON.parse(localStorage.getItem("user"));
+
+    if (data == null) {
+      ProxyState.user = "Your Name";
+    }
     ProxyState.user = data;
   }
 }
