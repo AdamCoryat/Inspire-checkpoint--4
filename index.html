@@ -26,7 +26,8 @@
                     Settings
                 </button>
                 <div class="dropdown-menu tran-bg" aria-labelledby="dropdownMenu2">
-                    <button class="text-light dropdown-item" type="button">Clock 12/24</button>
+                    <button onclick="app.settingsController.toggleClocks()" class="text-light dropdown-item"
+                        type="button">Clock 12/24</button>
                     <button class="text-light dropdown-item" type="button">Set Theme</button>
                     <form onsubmit="app.settingsController.addUser(event)" class="form-inline">
                         <div class="form-group">
@@ -41,7 +42,9 @@
         </div>
         </div>
         <div class="col-12 justify-content-center align-content-end d-flex flex-wrap">
-            <div id="clock" class="">
+            <div id="twentyFourHrs" class="clock d-none">
+            </div>
+            <div id="twelveHrs" class="clock">
             </div>
             <div id="greeting"
                 class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow text-center">

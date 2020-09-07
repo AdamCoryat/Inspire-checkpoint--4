@@ -72,7 +72,7 @@ li {
   height: 9vh;
 }
 
-#clock {
+.clock {
   font-family: "Cinzel", serif;
   color: #e2f1ef;
   font-size: 10vh;
