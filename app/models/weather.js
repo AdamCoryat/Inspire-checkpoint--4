@@ -9,7 +9,7 @@ export default class Weather {
   }
 
   get Template() {
-    return `<div class="text-light text-shadow m-2 p-2 ">
+    return `<div class="text-light text-shadow m-1 p-2 ">
     <p onclick="app.weatherController.switchTemp()">${this.city}<br><img src="http://openweathermap.org/img/wn/${this.icon}.png"><span class="pointer" id="temp">${this.f}</span></p>`;
   }
 
