@@ -28,12 +28,13 @@ function updateTime(k) {
 function _drawGreeting() {
   let elem = document.getElementById("greeting");
   let hour = ProxyState.time;
+  let user = ProxyState.user;
   if (hour >= 5 && hour <= 11) {
-    elem.innerHTML = `<h1>Good Morning, User</h1>`;
+    elem.innerHTML = `<h1>Good Morning, ${user}</h1>`;
   } else if (hour >= 12 && hour <= 17) {
-    elem.innerHTML = `<h1>Good Afternoon, User</h1>`;
+    elem.innerHTML = `<h1>Good Afternoon, ${user}</h1>`;
   } else {
-    elem.innerHTML = `<h1>Good Evening, User</h1>`;
+    elem.innerHTML = `<h1>Good Evening, ${user}</h1>`;
   }
 }
 
@@ -67,17 +68,6 @@ export default class WeatherController {
       weatherService.getWeather();
     } catch (e) {
       console.error(e);
-    }
-  }
-
-  toggleSettings() {
-    let elem = document.getElementById("settings");
-    let res = elem.classList.contains("invisible");
-
-    if (res == true) {
-      elem.classList.remove("invisible");
-    } else if (res == false) {
-      elem.classList.add("invisible");
     }
   }
 }

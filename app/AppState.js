@@ -12,8 +12,21 @@ class AppState extends EventEmitter {
   image = null;
   /** @type {Quote} */
   quote = null;
+  /** @type {Number} */
   time = Number;
+  /** @type {Number} */
   taskAmount = 0;
+  /** @type {String} */
+  user = "";
+
+  saveLocal() {
+    localStorage.setItem("user", JSON.stringify(ProxyState.user));
+  }
+
+  loadLocal() {
+    let data = JSON.parse(localStorage.getItem("user"));
+    ProxyState.user = data;
+  }
 }
 
 export const ProxyState = new Proxy(new AppState(), {

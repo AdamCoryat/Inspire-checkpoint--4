@@ -18,7 +18,7 @@
 <body class="container-fluid" id="bg-img">
     <main class="row">
         <div class="col-6 d-flex justify-content-start">
-            <i onclick="app.weatherController.toggleSettings()" class="pointer fa fa-cogs m-2 text-shadow"
+            <i onclick="app.settingsController.toggleSettings()" class="pointer fa fa-cogs m-2 text-shadow"
                 aria-hidden="true"></i>
             <div id="settings" class="m-2 dropdown invisible">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
@@ -28,7 +28,7 @@
                 <div class="dropdown-menu tran-bg" aria-labelledby="dropdownMenu2">
                     <button class="text-light dropdown-item" type="button">Clock 12/24</button>
                     <button class="text-light dropdown-item" type="button">Set Theme</button>
-                    <form onsubmit="app.weatherController.addUser(event)" class="form-inline">
+                    <form onsubmit="app.settingsController.addUser(event)" class="form-inline">
                         <div class="form-group">
                             <input type="text" name="name" id="name"
                                 class="form-control tran-bg border border-dark text-light" placeholder="Enter Name...">
