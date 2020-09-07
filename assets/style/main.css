@@ -50,9 +50,13 @@ li {
   list-style-type: none;
 }
 
-.weather-card {
-  min-width: 6vw;
-  min-height: 9vh;
+.dropdown-item {
+  color: rgba(0, 0, 0, 0.329) !important;
+}
+
+.fa-cogs {
+  font-size: 2.5em;
+  color: #e2f1ef;
 }
 
 .weather-col {
@@ -78,6 +82,11 @@ li {
 
 .clock-col {
   min-height: 32vh;
+}
+
+.bg-btn {
+  font-size: 2rem;
+  color: rgb(213, 226, 228);
 }
 
 .quote-size {
@@ -120,6 +129,10 @@ li {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.fa-recycle {
+  color: #00b300 !important;
 }
 
 .text-shadow {
@@ -3688,16 +3701,16 @@ input[type="button"].btn-block {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  color: #16181b;
+  color: #3a3a3a;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #0a0a0a9d;
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
   color: white;
   text-decoration: none;
-  background-color: #3ba5dc;
+  background-color: #d6e5ecab;
 }
 
 .dropdown-item.disabled,

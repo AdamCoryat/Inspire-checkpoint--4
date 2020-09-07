@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
@@ -14,24 +17,44 @@
 
 <body class="container-fluid" id="bg-img">
     <main class="row">
-        <div class="col-11 weather-col">
+        <div class="col-6 d-flex justify-content-start">
+            <i onclick="app.weatherController.toggleSettings()" class="pointer fa fa-cogs m-2 text-shadow"
+                aria-hidden="true"></i>
+            <div id="settings" class="m-2 dropdown invisible">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Settings
+                </button>
+                <div class="dropdown-menu tran-bg" aria-labelledby="dropdownMenu2">
+                    <button class="text-light dropdown-item" type="button">Clock 12/24</button>
+                    <button class="text-light dropdown-item" type="button">Set Theme</button>
+                    <form onsubmit="app.weatherController.addUser(event)" class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name"
+                                class="form-control tran-bg border border-dark text-light" placeholder="Enter Name...">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div id="weather" class="col-1 text-center text-light weather-col">
+        <div id="weather" class="col-6 d-flex flex-wrap justify-content-end text-center text-light">
+        </div>
         </div>
         <div class="col-12 justify-content-center align-content-end d-flex flex-wrap">
             <div id="clock" class="">
             </div>
             <div id="greeting"
-                class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow">
+                class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow text-center">
             </div>
         </div>
         </div>
-        <div class="col-3 quote-col">
+        <div class="col-3 d-sm-none d-md-block quote-col">
 
         </div>
-        <div id="quote" class="col-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
+        <div id="quote" class="col-12 col-md-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
         </div>
-        <div id="todo" class="col-3 quote-col d-flex flex-wrap align-content-end justify-content-end invisible">
+        <div id="todo"
+            class="col-12 col-md-3 quote-col d-flex flex-wrap align-content-end justify-content-end invisible">
             <div class="card tran-bg border border-dark text-light">
                 <div class="card-body tran-bg">
                     <h4 class="card-title text-center">ToDo - <span id="todo-counter"></span></h4>
@@ -47,10 +70,11 @@
             </div>
         </div>
         <div class="col-6 d-flex flex-wrap align-content-end justify-content-start">
-            <button onclick="app.imageController.getBgImage()">new bg</button>
+            <a class="pointer text-shadow" onclick="app.imageController.getBgImage()"><i class="fa fa-picture-o bg-btn"
+                    aria-hidden="true"></i></a>
         </div>
         <div id="list-toggle" class="col-6 d-flex flex-wrap align-content-end justify-content-end text-light">
-            <h3 class="text-shadow" onclick="app.todoController.toggleList()">Todo</h3>
+            <h3 class="text-shadow pointer" onclick="app.todoController.toggleList()">Todo</h3>
         </div>
     </main>
 
@@ -61,6 +85,15 @@
             </div>
         </div>
     </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+        integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+        integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
+        crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+        integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl'
+        crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
         integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
         crossorigin="anonymous"></script>

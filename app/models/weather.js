@@ -9,10 +9,8 @@ export default class Weather {
   }
 
   get Template() {
-    return `<div class="card weather-card m-2 border border-dark tran-bg">
-    <p>${this.city}</p>
-    <a onclick="app.weatherController.switchTemp()"><img src="http://openweathermap.org/img/wn/${this.icon}.png"><span id="temp">${this.f}</span></a>
-</div>`;
+    return `<div class="text-light text-shadow m-2 p-2 ">
+    <p onclick="app.weatherController.switchTemp()">${this.city}<br><img src="http://openweathermap.org/img/wn/${this.icon}.png"><span class="pointer" id="temp">${this.f}</span></p>`;
   }
 
   switchingTemp(str) {}
