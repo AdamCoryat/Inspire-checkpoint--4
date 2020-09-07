@@ -109,8 +109,7 @@ The todos portion of this project is the largest and will probably take the most
 ### Visualization
 
 - The data from the services are each rendered:
-  //TODO
-  - [ ] Quote: Quote always displayed and Author reveals on hover
+  - [x] Quote: Quote always displayed and Author reveals on hover
   - [x] Image: The image is required, however the additional data is optional
   - [x] Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
         //TODO
