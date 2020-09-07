@@ -128,11 +128,9 @@ The todos portion of this project is the largest and will probably take the most
 ### EXTENSION IDEAS
 
 - [x] On hover the quote should show the author of the quote and disappear when not hovered over
-      //TODO
-- [] Allow the user to set their name and have it save to localStorage
+- [x] Allow the user to set their name and have it save to localStorage
 - [x] Change the message from Good Morning to Good Afternoon, Evening as appropriate.
-      //TODO
-- [] Allow the user to toggle the clock from, 12hr to 24hr.
+- [x] Allow the user to toggle the clock from, 12hr to 24hr.
 - [x] Include an Icon to show what the weather is sunny/cloudy/rainy
 - [x] Add a button to cycle to next quote/picture
       //TODO

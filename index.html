@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@600&display=swap&family=Archivo:ital,wght@1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
@@ -28,7 +29,6 @@
                 <div class="dropdown-menu tran-bg" aria-labelledby="dropdownMenu2">
                     <button onclick="app.settingsController.toggleClocks()" class="text-light dropdown-item"
                         type="button">Clock 12/24</button>
-                    <button class="text-light dropdown-item" type="button">Set Theme</button>
                     <form onsubmit="app.settingsController.addUser(event)" class="form-inline">
                         <div class="form-group">
                             <input type="text" name="name" id="name"
@@ -41,26 +41,25 @@
         <div id="weather" class="col-6 d-flex flex-wrap justify-content-end text-center text-light">
         </div>
         </div>
-        <div class="col-12 justify-content-center align-content-end d-flex flex-wrap">
+        <div class="col-12 justify-content-center align-content-end d-flex flex-wrap clock-col">
             <div id="twentyFourHrs" class="clock d-none">
             </div>
             <div id="twelveHrs" class="clock">
             </div>
             <div id="greeting"
-                class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow text-center">
+                class="col-12 text-light flex-wrap d-flex justify-content-center align-content-start text-shadow text-center archivo-font greeting-f-s">
             </div>
         </div>
         </div>
-        <div class="col-3 d-sm-none d-md-block quote-col">
+        <div class="col-md-4 quote-col d-none d-md-block">
 
         </div>
-        <div id="quote" class="col-12 col-md-6 quote-col d-flex flex-wrap justify-content-center align-content-end">
+        <div id="quote" class="col-12 h-auto col-md-4 d-flex flex-wrap justify-content-center align-content-end">
         </div>
-        <div id="todo"
-            class="col-12 col-md-3 quote-col d-flex flex-wrap align-content-end justify-content-end invisible">
+        <div id="todo" class="col-12 h-auto col-md-4 d-flex flex-wrap align-content-end justify-content-end invisible">
             <div class="card tran-bg border border-dark text-light">
                 <div class="card-body tran-bg">
-                    <h4 class="card-title text-center">ToDo - <span id="todo-counter"></span></h4>
+                    <h4 class="card-title text-center archivo-font">ToDo - <span id="todo-counter"></span></h4>
                 </div>
                 <ul id="task" class="todo-card list-group list-group-flush">
                 </ul>
@@ -72,12 +71,13 @@
                 </form>
             </div>
         </div>
-        <div class="col-6 d-flex flex-wrap align-content-end justify-content-start">
+        <div class="col-6 d-flex flex-wrap align-content-end justify-content-start toggle-col">
             <a class="pointer text-shadow" onclick="app.imageController.getBgImage()"><i class="fa fa-picture-o bg-btn"
                     aria-hidden="true"></i></a>
         </div>
-        <div id="list-toggle" class="col-6 d-flex flex-wrap align-content-end justify-content-end text-light">
-            <h3 class="text-shadow pointer" onclick="app.todoController.toggleList()">Todo</h3>
+        <div id="list-toggle"
+            class="toggle-col col-6 d-flex flex-wrap align-content-end justify-content-end text-light">
+            <h3 class="text-shadow pointer archivo-font todo-f-s" onclick="app.todoController.toggleList()">Todo</h3>
         </div>
     </main>
 

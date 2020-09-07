@@ -60,7 +60,7 @@ li {
 }
 
 .weather-col {
-  min-height: 20vh;
+  min-height: 40vh;
 }
 
 .pointer {
@@ -72,6 +72,14 @@ li {
   height: 9vh;
 }
 
+.toggle-col {
+  max-height: 5vh;
+}
+
+.l-w {
+  color: #e2f1ef;
+}
+
 .clock {
   font-family: "Cinzel", serif;
   color: #e2f1ef;
@@ -81,12 +89,12 @@ li {
 }
 
 .clock-col {
-  min-height: 32vh;
+  min-height: 40vh;
 }
 
 .bg-btn {
   font-size: 2rem;
-  color: rgb(213, 226, 228);
+  color: #e2f1ef;
 }
 
 .quote-size {
@@ -94,8 +102,25 @@ li {
 }
 
 .quote-col {
-  font-family: "Antic Slab", serif;
   min-height: 40vh;
+}
+.archivo-font {
+  font-family: "Archivo", sans-serif;
+  color: #e2f1ef;
+}
+
+.greeting-f-s {
+  font-size: 6vh;
+  color: #e2f1ef;
+}
+
+.antic-font {
+  font-family: "Antic Slab", serif;
+  color: #e2f1ef;
+}
+
+.todo-f-s {
+  font-size: 3vh;
 }
 
 .overlay {

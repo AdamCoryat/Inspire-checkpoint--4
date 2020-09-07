@@ -5,7 +5,7 @@ export default class Quote {
   }
 
   get Template() {
-    return `<div class="card tran-bg text-light border border-dark m-1 p-1 contents quote-size text-center">
+    return `<div class="w-auto card tran-bg text-light border border-dark m-1 p-1 contents text-center antic-font">
                     <p>${this.body}</p>
                     <div class="overlay">
                     <p class="text">-${this.author}</p>
