@@ -1,5 +1,5 @@
-import TodoController from "./controllers/TodoController.js";
-import WeatherController from "./controllers/WeatherController.js";
+import TodoController from "./Controllers/TodoController.js";
+import WeatherController from "./Controllers/WeatherController.js";
 import ImageController from "./Controllers/ImageController.js";
 import QuoteController from "./Controllers/QuoteController.js";
 import SettingsController from "./Controllers/SettingsController.js";
