@@ -3,7 +3,6 @@ import Weather from "./Models/Weather.js";
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 
-// TODO you will want to add all your other data to the AppState
 class AppState extends EventEmitter {
   /** @type {Todo[]} */
   todos = [];
@@ -14,6 +13,7 @@ class AppState extends EventEmitter {
   /** @type {Quote} */
   quote = null;
   time = Number;
+  taskAmount = 0;
 }
 
 export const ProxyState = new Proxy(new AppState(), {

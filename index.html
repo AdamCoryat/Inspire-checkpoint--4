@@ -34,9 +34,9 @@
         <div id="todo" class="col-3 quote-col d-flex flex-wrap align-content-end justify-content-end invisible">
             <div class="card tran-bg border border-dark text-light">
                 <div class="card-body tran-bg">
-                    <h4 class="card-title text-center">ToDo</h4>
+                    <h4 class="card-title text-center">ToDo - <span id="todo-counter"></span></h4>
                 </div>
-                <ul id="task" class="list-group list-group-flush">
+                <ul id="task" class="todo-card list-group list-group-flush">
                 </ul>
                 <form onsubmit="app.todoController.addTask(event)" class="form-inline">
                     <div class="form-group">

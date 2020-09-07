@@ -46,24 +46,8 @@
   box-sizing: border-box;
 }
 
-.quote-size {
-  max-width: 30vw;
-}
-
-#clock {
-  font-family: "Cinzel", serif;
-  color: #e2f1ef;
-  font-size: 10vh;
-  text-align: center;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-}
-
-.text-shadow {
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-}
-
-.temp {
-  cursor: pointer;
+li {
+  list-style-type: none;
 }
 
 .weather-card {
@@ -75,13 +59,8 @@
   min-height: 20vh;
 }
 
-.clock-col {
-  min-height: 32vh;
-}
-
-.quote-col {
-  font-family: "Antic Slab", serif;
-  min-height: 40vh;
+.pointer {
+  cursor: pointer;
 }
 
 .time-card {
@@ -89,14 +68,25 @@
   height: 9vh;
 }
 
-.tran-bg {
-  background-color: rgba(0, 0, 0, 0.384) !important;
+#clock {
+  font-family: "Cinzel", serif;
+  color: #e2f1ef;
+  font-size: 10vh;
+  text-align: center;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
-#bg-img {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.clock-col {
+  min-height: 32vh;
+}
+
+.quote-size {
+  max-width: 30vw;
+}
+
+.quote-col {
+  font-family: "Antic Slab", serif;
+  min-height: 40vh;
 }
 
 .overlay {
@@ -115,6 +105,11 @@
   opacity: 1;
 }
 
+.todo-card {
+  height: 10vh;
+  overflow-y: scroll;
+}
+
 .text {
   color: white;
   font-size: 20px;
@@ -125,6 +120,20 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tran-bg {
+  background-color: rgba(0, 0, 0, 0.384) !important;
+}
+
+#bg-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html {

@@ -7,8 +7,14 @@ function _drawTasks() {
   document.getElementById("task").innerHTML = template;
 }
 
+function _drawCounter() {
+  let template = ProxyState.taskAmount;
+  document.getElementById("todo-counter").innerText = template;
+}
+
 export default class TodoController {
   constructor() {
+    ProxyState.on("taskAmount", _drawCounter);
     ProxyState.on("todos", _drawTasks);
     todoService.getTasks();
   }

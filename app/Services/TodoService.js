@@ -8,11 +8,13 @@ class TodoService {
   async getTasks() {
     let res = await api.get(url);
     ProxyState.todos = res.data.data.map((t) => new Todo(t));
+    ProxyState.taskAmount = ProxyState.todos.length;
   }
 
   async addTask(task) {
     let res = await api.post(url, task);
     ProxyState.todos = [...ProxyState.todos, new Todo(res.data.data)];
+    ProxyState.taskAmount = ProxyState.todos.length;
   }
 
   async toggleTaskStatus(id) {
@@ -36,6 +38,7 @@ class TodoService {
     }
     ProxyState.todos.splice(index, 1);
     ProxyState.todos = ProxyState.todos;
+    ProxyState.taskAmount = ProxyState.todos.length;
   }
 }
 

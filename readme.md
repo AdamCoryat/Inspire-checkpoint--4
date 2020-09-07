@@ -112,8 +112,7 @@ The todos portion of this project is the largest and will probably take the most
   - [x] Quote: Quote always displayed and Author reveals on hover
   - [x] Image: The image is required, however the additional data is optional
   - [x] Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
-        //TODO
-  - [ ] Todo: Todo's are shown on the page including a count of remaining tasks to complete
+  - [x] Todo: Todo's are shown on the page including a count of remaining tasks to complete
 - [x] The image should be on large display with at least one other element positioned over the top of the image.
 - [x] When adding a Todo the page does not reload
 - [x] Completed Todo's checkbox remains checked on reload ([hint: checked attribute](https://www.w3schools.com/tags/att_input_checked.asp))
@@ -128,23 +127,17 @@ The todos portion of this project is the largest and will probably take the most
 
 ### EXTENSION IDEAS
 
-//TODO
-
-- On hover the quote should show the author of the quote and disappear when not hovered over
-  //TODO
-- Allow the user to set their name and have it save to localStorage
-  //Complete
-- Change the message from Good Morning to Good Afternoon, Evening as appropriate.
-  //TODO
-- Allow the user to toggle the clock from, 12hr to 24hr.
-  //Complete
-- Include an Icon to show what the weather is sunny/cloudy/rainy
-  //Complete
-- Add a button to cycle to next quote/picture
-  //TODO
-- Add a settings so user can change to a new "theme" (font, background colors, etc.)
-  //Done Maybe
-- `BONUS DIFFICULTY` The todo list shouldn't have to redraw every item just because one of them changed.
+- [x] On hover the quote should show the author of the quote and disappear when not hovered over
+      //TODO
+- [] Allow the user to set their name and have it save to localStorage
+- [x] Change the message from Good Morning to Good Afternoon, Evening as appropriate.
+      //TODO
+- [] Allow the user to toggle the clock from, 12hr to 24hr.
+- [x] Include an Icon to show what the weather is sunny/cloudy/rainy
+- [x] Add a button to cycle to next quote/picture
+      //TODO
+- [] Add a settings so user can change to a new "theme" (font, background colors, etc.)
+- [x] `BONUS DIFFICULTY` The todo list shouldn't have to redraw every item just because one of them changed.
   - If you think through some of the actions being performed you might find a way to optimize the list by only updating the one todo that changes at a time
   - Every time you update a todo you shouldn't have to re-`get` the entire list you already know what changed about the one todo
 

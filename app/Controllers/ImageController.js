@@ -1,5 +1,3 @@
-//TODO Create methods for constructor, and rendering the image to the page
-
 import imageService from "../Services/ImageService.js";
 import { ProxyState } from "../AppState.js";
 
